@@ -123,6 +123,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
+                <a href="index.php?page=ekstra2511500041" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ekstrakurikuler</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="index.php?page=mapel" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Mata Pelajaran</p>
@@ -177,12 +183,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Kelas</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Jadwal</p>
-                </a>
-              </li>
             </ul>
              <?php endif; ?>
 
@@ -226,12 +226,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
             <ul class="nav nav-treeview">
+              <?php if ($role == 'admin' || $role == 'guru') : ?>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="index.php?page=jadwal" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Jadwal</p>
                 </a>
               </li>
+              <?php endif; ?>
+              <?php if ($role == 'admin' || $role == 'siswa') : ?>
+              <li class="nav-item">
+                <a href="index.php?page=jadwal_kelas" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Jadwal Kelas</p>
+                </a>
+              </li>
+              <?php endif; ?>
               <li class="nav-item">
                 <a href="logout.php" class="nav-link">
                   <i class="nav-icon fas fa-th"></i>

@@ -31,7 +31,7 @@ if(isset($_POST['tambah'])) {
     $password = '1234';
     $role = "siswa";
 
-    $insert = mysqli_query($koneksi,"INSERT INTO guru values ('$Nis','$Nm_siswa','$Jenkel','$Hp','$Id_kelas')");
+    $insert = mysqli_query($koneksi,"INSERT INTO siswa values ('$Nis','$Nm_siswa','$Jenkel','$Hp','$Id_kelas')");
 
     $insert = mysqli_query($koneksi,"INSERT INTO users (username, password, role) values ('$username','$password','$role')");
     if ($insert) {
